@@ -20,15 +20,15 @@ requirements:
   build:
     - python
     - setuptools
-    - ncephes >=1.0.38
+    - ncephes >=1.0.40
   run:
     - python
     - scipy >=0.18.1
-    - ncephes >=1.0.38
+    - ncephes >=1.0.40
     - numpy >=1.10
-    - numpy-sugar >=1.0.41
+    - numpy-sugar >=1.0.42
     - scipy-sugar >=1.0.2
-    - optimix >=1.2.10
+    - optimix >=1.2.12
     - cachetools >=2.0
     - tqdm >=4
     - liknorm-py >=1.0.6
