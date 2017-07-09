@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "1.2.13" %}
-{% set sha256 = "0b341dcdfe9619f803c9f0bc5f24f872bc3bc040e4f8e5e5a934a7d4a510bbaa" %}
+{% set version = "1.2.19" %}
+{% set sha256 = "9a6e6cce9aee8c6f63d463e087a2575abd99f622ceec5a2755ddc20fa474c0de" %}
 
 package:
   name: {{ name|lower }}
@@ -26,13 +26,14 @@ requirements:
     - scipy >=0.18.1
     - ncephes >=1.0.40
     - numpy >=1.10
-    - numpy-sugar >=1.0.42
+    - numpy-sugar >=1.0.47
     - scipy-sugar >=1.0.2
-    - optimix >=1.2.12
+    - optimix >=1.2.13
     - cachetools >=2.0
     - tqdm >=4
     - liknorm-py >=1.0.6
     - numba >=0.32
+    ]
 
 test:
   requires:
