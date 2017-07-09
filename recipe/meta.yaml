@@ -37,6 +37,7 @@ requirements:
 test:
   requires:
     - pytest >=3
+    - pytest-pep8
   imports:
     - glimix_core
   commands:
