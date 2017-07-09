@@ -33,7 +33,6 @@ requirements:
     - tqdm >=4
     - liknorm-py >=1.0.6
     - numba >=0.32
-    ]
 
 test:
   requires:
