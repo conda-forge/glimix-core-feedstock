@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or linux32 or (win64 and py27)]
+  skip: true  # [win32 or linux32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -47,7 +47,7 @@ about:
   home: https://github.com/limix/glimix-core
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: https://glimix-core.readthedocs.io/
   dev_url: https://github.com/limix/glimix-core
