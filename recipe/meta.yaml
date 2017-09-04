@@ -21,6 +21,7 @@ requirements:
     - python
     - setuptools
     - ncephes >=1.0.40
+    - pytest-runner
   run:
     - python
     - scipy >=0.18.1
