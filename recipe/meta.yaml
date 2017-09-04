@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "1.2.20" %}
-{% set sha256 = "04cd3e7e27e34fad8777a16a80212902e962b62e1faf73ba78ae74230b459494" %}
+{% set version = "1.2.23" %}
+{% set sha256 = "2af6b696fffd19db7bd8ffd8071a9d0311003e6d386dd725343c825bff752011" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or linux32 or (win64 and py27)]
+  skip: true  # [win32 or linux32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - python
     - setuptools
     - ncephes >=1.0.40
+    - pytest-runner
   run:
     - python
     - scipy >=0.18.1
@@ -47,7 +48,7 @@ about:
   home: https://github.com/limix/glimix-core
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: https://glimix-core.readthedocs.io/
   dev_url: https://github.com/limix/glimix-core
