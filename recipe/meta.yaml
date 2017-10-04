@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "1.2.23" %}
-{% set sha256 = "2af6b696fffd19db7bd8ffd8071a9d0311003e6d386dd725343c825bff752011" %}
+{% set version = "1.3.2" %}
+{% set sha256 = "eede67cfec2dec24ff8434d023b115e1bf692d42161c3bcf9d0c654a77db7a99" %}
 
 package:
   name: {{ name|lower }}
@@ -13,32 +13,33 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or linux32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
-    - ncephes >=1.0.40
     - pytest-runner
   run:
     - python
     - scipy >=0.18.1
-    - ncephes >=1.0.40
+    - hcephes >=0.2.3
     - numpy >=1.10
-    - numpy-sugar >=1.0.47
-    - scipy-sugar >=1.0.2
-    - optimix >=1.2.13
+    - numpy-sugar >=1.1.2
+    - scipy-sugar >=1.0.4
+    - optimix >=1.2.21
     - cachetools >=2.0
     - tqdm >=4
-    - liknorm-py >=1.0.6
+    - liknorm >=1.3.11
+    - liknorm-py >=1.0.12
     - numba >=0.32
+    - toolz
 
 test:
   requires:
     - pytest >=3
     - pytest-pep8
+    - pytest-sugar
   imports:
     - glimix_core
   commands:
