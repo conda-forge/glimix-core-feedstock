@@ -1,59 +1,59 @@
 {% set name = "glimix-core" %}
-{% set version = "1.3.5" %}
-{% set sha256 = "8b4f33f9944526870387164fd49a187f812fcbd027145e2d1dc33ee08eb80c9f" %}
+{% set version = "1.3.4" %}
+{% set sha256 = "d3b7a60358d622f7f10dcd40877af42b3af825bef65c7e09a24e43aebb929f17" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
-  source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
-    build:
-      number: 0
-      script: python setup.py install --single-version-externally-managed --record record.txt
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
-      requirements:
-        build:
-          - python
-          - setuptools
-          - pytest-runner
-        run:
-          - python
-          - scipy >=0.18.1
-          - hcephes >=0.2.3
-          - numpy >=1.10
-          - numpy-sugar >=1.1.2
-          - scipy-sugar >=1.0.4
-          - optimix >=1.2.21
-          - cachetools >=2.0
-          - tqdm >=4
-          - liknorm >=1.3.11
-          - liknorm-py >=1.0.12
-          - numba >=0.32
-          - toolz
+requirements:
+  build:
+    - python
+    - setuptools
+    - pytest-runner
+  run:
+    - python
+    - scipy >=0.18.1
+    - hcephes >=0.2.3
+    - numpy >=1.10
+    - numpy-sugar >=1.1.2
+    - scipy-sugar >=1.0.4
+    - optimix >=1.2.21
+    - cachetools >=2.0
+    - tqdm >=4
+    - liknorm >=1.3.11
+    - liknorm-py >=1.0.12
+    - numba >=0.32
+    - toolz
 
-        test:
-          requires:
-            - pytest >=3
-            - pytest-pep8
-            - pytest-sugar
-          imports:
-            - glimix_core
-          commands:
-            - python -c "import sys; import glimix_core; sys.exit(glimix_core.test())"
+test:
+  requires:
+    - pytest >=3
+    - pytest-pep8
+    - pytest-sugar
+  imports:
+    - glimix_core
+  commands:
+    - python -c "import sys; import glimix_core; sys.exit(glimix_core.test())"
 
-          about:
-            home: https://github.com/limix/glimix-core
-            license: MIT
-            license_family: MIT
-            license_file: LICENSE.txt
-            summary: 'Fast inference for Generalized Linear Mixed Models'
-            doc_url: https://glimix-core.readthedocs.io/
-            dev_url: https://github.com/limix/glimix-core
+about:
+  home: https://github.com/limix/glimix-core
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: 'Fast inference for Generalized Linear Mixed Models'
+  doc_url: https://glimix-core.readthedocs.io/
+  dev_url: https://github.com/limix/glimix-core
 
-            extra:
-              recipe-maintainers:
-                - Horta
+extra:
+  recipe-maintainers:
+    - Horta
