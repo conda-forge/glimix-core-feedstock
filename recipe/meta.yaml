@@ -39,7 +39,6 @@ test:
   requires:
     - pytest >=3
     - pytest-pep8
-    - pytest-sugar
   imports:
     - glimix_core
   commands:
