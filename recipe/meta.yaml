@@ -49,7 +49,7 @@ about:
   home: https://github.com/limix/glimix-core
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: 'Fast inference for Generalized Linear Mixed Models'
   doc_url: https://glimix-core.readthedocs.io/
   dev_url: https://github.com/limix/glimix-core
