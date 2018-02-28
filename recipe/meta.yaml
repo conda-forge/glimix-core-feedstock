@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "1.2.24" %}
-{% set sha256 = "2fbf3bd15be0db5e89d53691147b49c176ac33b36c2966646333f8c0568d3946" %}
+{% set version = "1.2.25" %}
+{% set sha256 = "1c311dc6d8b2c884f31a9506163ca72f776c901e8f73c685b8ca858128e3c974" %}
 
 package:
   name: {{ name|lower }}
