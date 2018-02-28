@@ -42,7 +42,7 @@ test:
   imports:
     - glimix_core
   commands:
-    - python -c "import sys; import glimix_core; sys.exit(glimix_core.test())"
+    - python -c "import glimix_core"
 
 about:
   home: https://github.com/limix/glimix-core
