@@ -47,7 +47,7 @@ test:
     - pytest >=3
     - pytest-pep8
   imports:
-    - import pandas
+    - pandas
     - glimix_core
   commands:
     - python -c "import sys; import glimix_core; sys.exit(glimix_core.test())"
