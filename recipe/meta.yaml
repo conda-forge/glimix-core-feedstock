@@ -21,6 +21,8 @@ requirements:
     - pip
     - setuptools >=39.0.1
     - pytest-runner
+    - pypandoc
+    - wheel
   run:
     - python
     - pytest-pep8 >=1.0.6
