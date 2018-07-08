@@ -14,14 +14,15 @@ Summary: Fast inference for Generalized Linear Mixed Models
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/glimix-core-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/glimix-core-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/glimix-core-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/glimix-core-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/glimix-core-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/glimix-core-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/glimix-core-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/glimix-core-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glimix-core/badges/version.svg)](https://anaconda.org/conda-forge/glimix-core)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/glimix-core/badges/downloads.svg)](https://anaconda.org/conda-forge/glimix-core)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-glimix--core-green.svg)](https://anaconda.org/conda-forge/glimix-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/glimix-core.svg)](https://anaconda.org/conda-forge/glimix-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/glimix-core.svg)](https://anaconda.org/conda-forge/glimix-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/glimix-core.svg)](https://anaconda.org/conda-forge/glimix-core) |
 
 Installing glimix-core
 ======================
