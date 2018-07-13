@@ -1,5 +1,5 @@
 {% set name = "glimix-core" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 {% set sha256 = "19e825e73217f7b3fc8532af67d2b23f49233760aaf74733827a93e85a7e0fcc" %}
 
 package:
@@ -26,8 +26,8 @@ requirements:
     - brent-search >=1.0.33
     - cachetools
     - cytoolz
-    - liknorm >=1.3.11
-    - liknorm-py >=1.0.12
+    - liknorm >=1.4.6
+    - liknorm-py >=1.1.13
     - ndarray-listener >=1.1.2
     - numpy >=1.14.5
     - numpy-sugar >=1.2.5
