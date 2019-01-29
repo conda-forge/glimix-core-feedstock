@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "6447fed9111e3476d308e5bf8ce26b2aa011d15cfe692f0552a0fc021188b6d3" %}
+{% set version = "2.0.5" %}
+{% set sha256 = "9791eb7b89ccd78f0b89526a8a83841c6dbf851e1030d64e0d8af7a387133d3c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [win and py27]
   script: python -m pip install --no-deps --ignore-installed .
 
