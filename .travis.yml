@@ -1,26 +1,24 @@
 # This file was generated automatically from conda-smithy. To update this configuration,
 # update the conda-forge.yml and/or the recipe/meta.yaml.
+# -*- mode: yaml -*-
 
 language: generic
 
 os: osx
-osx_image: xcode6.4
+osx_image: xcode9.4
+
 
 env:
   matrix:
-    - CONFIG=osx_python2.7
     - CONFIG=osx_python3.6
     - CONFIG=osx_python3.7
 
-  global:
-    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "JjOsjsaSKB6JDrgl21JIwET7MBfeqNoYNn8UUMaPnXu++0EZf6aq+UasXfbp8swWMZY2IH27ROs6brqURN9HDHSvyASfarAobUJKZVy5f/kATbEiN7HoIdZq/bUjA/alrHhDMcyhp58ykmDJAKoFwieBekleUB+gQMfnqu/ZXzBzCwI1KcWfum2hfrAwZIuGN0AOhkzDzXCmjqlPnhcBEM8QcIhO2dqeInDY7N1SeBpwfmA9bpQaSc3n2wu/5yEHwnfjzUb4UAAT3LzaTzz4E/6oYsfaIWDbvWxP+J6H86o+H2upJqNK4StlHMnEB+I8K3t0wDr4DqkQQkHVM2nMpn9Frs4JsXj6LJzoz3555djv6q29sxUbnwAduVoQB8b6j5hHrIGLy9IDSbdCFNErZASK+nrECp7O0F3Zs/2JMvDKYg2ul+1D9V1YUnwUn743UWfdkJ1irI6E9MwjCeIpo6FcvLAAJ4US/RHRYXNuvVCtj8i7SCRTiVLkCWWx7s6EXp2+hKZjlViREha589+b1KneQhIm+UMvCRKbSXU0IsDJosCpqIrIB0ql21nXun9QLJaR1YEHt5TV/fhfPnSzLJLoc1gHMvgpQZm17xtA3R6Yve+L0XrlWir2A9D4VKzknZEv72kZvcMTwuNd3Pq2cCdyb16zWpIF3pay/ar9hJ0="
 
 
 before_install:
     # Fast finish the PR.
     - |
-      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/branch2.0/recipe/conda_forge_ci_setup/ff_ci_pr_build.py | \
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/master/recipe/conda_forge_ci_setup/ff_ci_pr_build.py | \
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
     # Remove homebrew.
@@ -49,7 +47,7 @@ install:
       echo "Configuring conda."
       source /Users/travis/miniconda3/bin/activate root
 
-      conda install --yes --quiet conda-forge::conda-forge-ci-setup=2
+      conda install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda-build
       setup_conda_rc ./ ./recipe ./.ci_support/${CONFIG}.yaml
 
       source run_conda_forge_build_setup
@@ -61,5 +59,5 @@ install:
 script:
   # generate the build number clobber
   - make_build_number ./ ./recipe ./.ci_support/${CONFIG}.yaml
-  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml --clobber-file ./.ci_support/clobber_${CONFIG}.yaml
+  -  conda build ./recipe -m ./.ci_support/${CONFIG}.yaml --clobber-file ./.ci_support/clobber_${CONFIG}.yaml
   - upload_package ./ ./recipe ./.ci_support/${CONFIG}.yaml
