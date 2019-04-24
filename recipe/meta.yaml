@@ -12,15 +12,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  skip: True  # [py27]
-  script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - pip
     - pytest-runner
-    - python
+    - python >3
     - setuptools >=39.0.1
     - wheel
   run:
@@ -35,7 +35,7 @@ requirements:
     - optimix >=3.0.3
     - pandas >=0.23.3
     - pytest
-    - python
+    - python >3
     - scipy >=1.1.0
     - scipy-sugar >=1.0.9
     - tqdm >=4.23.4
