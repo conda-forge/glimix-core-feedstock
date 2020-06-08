@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "3.1.8" %}
-{% set sha256 = "d92a9b9fcb4d4891e6118831f09e0a696882f555db73e74a14a4b98d111a7a96" %}
+{% set version = "3.1.10" %}
+{% set sha256 = "a37414e9b02ac75a29d35cdc48d950e6ad08d8078e9bec87206042135f309266" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -56,7 +56,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Fast inference for Generalized Linear Mixed Models'
+  summary: Fast inference for Generalized Linear Mixed Models
   doc_url: https://glimix-core.readthedocs.io/
   dev_url: https://github.com/limix/glimix-core
 
