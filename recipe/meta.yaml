@@ -1,6 +1,6 @@
 {% set name = "glimix-core" %}
-{% set version = "3.1.11" %}
-{% set sha256 = "edcc9e374a491a0d13d451fbf06ba8bc87b2618d7e97d25a0bed96fd3a23d85d" %}
+{% set version = "3.1.14" %}
+{% set sha256 = "cb6d93804899459b7e252e02915f925e4150ca4d95c60ef31e4252e7479602d4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
